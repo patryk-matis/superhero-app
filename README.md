@@ -10,10 +10,12 @@ Inside the root directory run the following commands:
 
 # Pre-run requirements
 You need to create .env file and specify superhero-api token.\
-.env.sample can be found in files
+Token can be found here: https://www.superheroapi.com/ 
 
 Example:\
 `REACT_APP_SUPERHERO_API_TOKEN = 1208883290281177`
+
+.env.sample can be found in files
 
 # Run
 ```
