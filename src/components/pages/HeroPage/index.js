@@ -1,4 +1,4 @@
-import {Input, Row, Col, Typography} from 'antd';
+import {Input, Row, Col, Typography, message} from 'antd';
 import 'antd/dist/antd.css';
 import { useState } from 'react';
 import './index.css';
@@ -16,10 +16,21 @@ export default function HeroPage(){
         console.log("search")
         setFetchingHeroes(true);
         try {
-            const res = await axios.get(
-                '/' + process.env.REACT_APP_SUPERHERO_API_TOKEN + '/search/' + value,
-            );
-            setHeroArray(res.data.results);
+            const token = process.env.REACT_APP_SUPERHERO_API_TOKEN;
+            if (token){
+                const res = await axios.get(
+                    '/' + process.env.REACT_APP_SUPERHERO_API_TOKEN + '/search/' + value,
+                );
+                if (res.data.results){
+                    setHeroArray(res.data.results);
+                }
+                else {
+                    message.warning('No hero found');
+                }
+            }
+            else{
+                message.error('Superhero API Access token was not found (.env file)');
+            }
         } catch (e) {
             console.log(e);
         }

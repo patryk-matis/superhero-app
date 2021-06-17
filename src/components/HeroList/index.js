@@ -7,7 +7,7 @@ export default function HeroList(props){
         <List 
         itemLayout="horizontal"
         dataSource={props.heroArray}
-        pagination={{pageSize: 7}}
+        pagination={{pageSize: 7, pageSizeOptions:[]}}
         renderItem={item => (
             <List.Item>
                 <List.Item.Meta
