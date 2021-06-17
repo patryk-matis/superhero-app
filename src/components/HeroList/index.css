@@ -1,0 +1,49 @@
+body {
+    height: auto !important;
+}
+
+.herolist-alias{
+    padding-left: 50px;
+}
+
+.herolist-image{
+    width:17vw;
+}
+
+.herolist-divider{
+    display:none;
+}
+
+.ant-popover-inner{
+    width:50vw;
+}
+
+.ant-pagination{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1300px) {
+    .ant-popover-inner{
+        width:65vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .ant-popover-inner{
+        width:85vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .herolist-divider{
+        display: inline !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .herolist-image{
+        width:50vw !important;
+    }
+}
+
