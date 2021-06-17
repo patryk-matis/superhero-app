@@ -3,6 +3,7 @@ import './index.css';
 
 export default function HeroList(props){
     return(
+        <>
         <List 
         itemLayout="horizontal"
         dataSource={props.heroArray}
@@ -23,8 +24,8 @@ export default function HeroList(props){
                                     <p>Alter Egos: {item.biography["alter-egos"]}</p>
                                     <p>Aliases:</p>
                                     <div className="herolist-alias">
-                                        {item.biography.aliases.map(alias => {
-                                            return <p>- {alias}</p>
+                                        {item.biography.aliases.map((alias, index) => {
+                                            return <p key={index}>- {alias}</p>
                                         })}
                                     </div>
                                     <p>Place of birth: {item.biography["place-of-birth"]}</p>
@@ -53,5 +54,6 @@ export default function HeroList(props){
             </List.Item>
         )}                       
         />
+        </>
     );
 }

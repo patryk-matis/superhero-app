@@ -13,6 +13,7 @@ export default function HeroPage(){
     const [heroArray, setHeroArray] = useState([]);
 
     const fetchHeroes = async (value) => {
+        console.log("search")
         setFetchingHeroes(true);
         try {
             const res = await axios.get(
@@ -37,7 +38,7 @@ export default function HeroPage(){
                     {!fetchingHeroes ? 
                     <Search
                         placeholder="type superhero name here"
-                        enterButton="Search"
+                        enterButton="Search."
                         size="large"
                         onSearch={(value) => fetchHeroes(value)}
                     />
