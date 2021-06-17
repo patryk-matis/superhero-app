@@ -1,5 +1,5 @@
 # superhero-app
-Simple react app that allows you to search and display a list of superheroes.
+Simple react app that allows you to search and display a list of superheroes for Innokrea.
 
 
 # Install
